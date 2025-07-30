@@ -7,22 +7,25 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      color: #333;
       text-align: center;
-      margin: 50px;
+      padding: 50px;
     }
-    #duaForm {
-      display: none;
-      margin-top: 20px;
-    }
-    textarea {
-      width: 100%;
-      max-width: 400px;
-      height: 100px;
+    h2 {
+      margin-bottom: 20px;
     }
     button {
-      padding: 10px 20px;
-      margin-top: 10px;
+      padding: 12px 24px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
       cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -30,29 +33,7 @@
 
   <h2>In remembrance of my beloved mother, may Allah Subhanahu Wa Ta'ala forgive all her sins and grant her the highest place in Jannah</h2>
 
-  <button id="makeDuaBtn">Make a Dua</button>
-
-  <div id="duaForm">
-    <textarea id="duaText" placeholder="Write your dua here..."></textarea><br/>
-    <button onclick="sendDua()">Send</button>
-  </div>
-
-  <script>
-    document.getElementById('makeDuaBtn').onclick = function () {
-      document.getElementById('duaForm').style.display = 'block';
-    };
-
-    function sendDua() {
-      const dua = document.getElementById('duaText').value;
-      if (!dua.trim()) {
-        alert("Please enter a dua before sending.");
-        return;
-      }
-      const subject = encodeURIComponent("New Dua Submission");
-      const body = encodeURIComponent(dua);
-      window.location.href = `mailto:info@azkardaily.com?subject=${subject}&body=${body}`;
-    }
-  </script>
+  <button>Coming Soon</button>
 
 </body>
 </html>
